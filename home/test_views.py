@@ -7,7 +7,7 @@ class TestViews(SimpleTestCase):
 
     def test_get_home_page(self):
         """Test get home page view."""
-        response = self.client.get('/home/')
+        response = self.client.get('/')
 
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'home/index.html')
+        self.assertTemplateUsed(response, 'index.html')
