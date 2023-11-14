@@ -1,1 +1,1 @@
-web: gunicorn lerncare.wsgi
+web: gunicorn lerncareProject.wsgi
