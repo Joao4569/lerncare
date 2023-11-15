@@ -19,4 +19,5 @@ from django.urls import path, include  # Import include to include other apps
 urlpatterns = [
     path('admin/', admin.site.urls),  # Path to django admin page
     path('', include('home.urls')),  # Path to home app
+    path('dashboard/', include('dashboard.urls')),  # Path to dashboard app
 ]
