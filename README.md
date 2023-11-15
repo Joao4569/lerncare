@@ -75,3 +75,9 @@ This application is built using a test driven development mindset, integrated au
 ### Deployment testing
 
 Once all the deployment settings were in place and the project was deployed on Heroku, I proceeded to manually test the deployment by creating a template for testing output on the deployed site.
+
+
+## Credits
+
+ - We made use of [Online PNG Tools](https://onlinepngtools.com/) to resize the logo.
+ - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to create the current Privacy Policy.

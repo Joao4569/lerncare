@@ -1,8 +1,0 @@
-/* This will allow the h100 Bootstrap classes and vertical centering to work as intended */
-html {
-	height: 100%;
-}
-
-body {
-	background-color: brown;
-}

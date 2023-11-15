@@ -1,0 +1,38 @@
+/* This will allow the h100 Bootstrap classes and vertical centering to work as intended */
+html {
+	height: 100%;
+	background-color: whitesmoke;
+}
+
+body {
+	background-color: white;
+}
+
+/* Colors */
+
+.orange-bg {
+	background-color: #FFA500 !important;
+}
+
+.nav-link {
+	color: white !important;
+}
+
+.text-white {
+	color: white !important;
+}
+
+/* Footer */
+
+.social-link-container {
+    margin: 0.5rem 0 !important;
+  }
+
+  .social-links {
+	font-size: 2rem;
+	padding: 0rem 2rem
+  }
+
+  .no-deco {
+	text-decoration: none !important;
+  }
