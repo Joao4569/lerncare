@@ -1,0 +1,33 @@
+/* Tiles */
+
+.dropdown-pointer {
+    font-size: 1.5rem;
+}
+
+.tile-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 2rem !important;
+}
+
+.tile-hover:hover {
+    color: white !important;
+}
+
+.tile-content {
+    font-family: 'Raleway', sans-serif
+}
+
+.border-orange {
+    border-color: #FFA500 !important;
+}
+
+.btn-outline-success {
+    color: black !important;
+}
+
+/* Avatar tile */
+.avatar-card {
+    height: 80px;
+    width: 80px;
+}

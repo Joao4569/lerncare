@@ -81,3 +81,4 @@ Once all the deployment settings were in place and the project was deployed on H
 
  - We made use of [Online PNG Tools](https://onlinepngtools.com/) to resize the logo.
  - [Privacy Policy Generator](https://www.privacypolicygenerator.info/) was used to create the current Privacy Policy.
+ - Avatar Image by [Freepik](https://www.freepik.com/free-psd/3d-illustration-human-avatar-profile_58509057.htm#query=png%20avatars&position=16&from_view=keyword&track=ais&uuid=8e58f772-3b45-46c3-933c-a61a490cae2f)">

@@ -1,11 +1,14 @@
+/* Import Google Fonts - Raleway and Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto&display=swap');
+
 /* This will allow the h100 Bootstrap classes and vertical centering to work as intended */
 html {
 	height: 100%;
-	background-color: whitesmoke;
 }
 
 body {
 	background-color: white;
+	font-family: 'Raleway', sans-serif
 }
 
 /* Colors */
@@ -15,24 +18,44 @@ body {
 }
 
 .nav-link {
+	font-family: 'Roboto', sans-serif;
+	color: black !important;
+	font-weight: 700;
+}
+
+.nav-link:hover {
 	color: white !important;
 }
 
-.text-white {
-	color: white !important;
+.copyright {
+	font-family: 'Roboto', sans-serif;
+	color: black !important;
+	font-weight: 700;
+}
+
+.text-black {
+	color: black !important;
 }
 
 /* Footer */
 
 .social-link-container {
     margin: 0.5rem 0 !important;
-  }
+}
 
-  .social-links {
+.social-links {
 	font-size: 2rem;
 	padding: 0rem 2rem
-  }
+}
 
-  .no-deco {
+.link-hover:hover {
+	color: white !important;
+}
+
+.no-deco {
 	text-decoration: none !important;
-  }
+}
+
+.footer-text {
+	font-weight: 500 !important;
+}
