@@ -14,13 +14,14 @@ body {
 /* Colors */
 
 .orange-bg {
-	background-color: #FFA500 !important;
+	background-color: #ff8100f7 !important;
 }
 
 .nav-link {
 	font-family: 'Roboto', sans-serif;
 	color: black !important;
 	font-weight: 700;
+	font-size: 1.2rem;
 }
 
 .nav-link:hover {

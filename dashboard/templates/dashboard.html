@@ -13,7 +13,11 @@
 		<div class="col-12">
 			<ul class="nav">
 				<li class="nav-item social-links">
-					<a class="nav-link" href="{% url 'home' %}"><i class="fa-solid fa-angles-left"></i><span>Home</span></a>
+					<a class="nav-link pb-0 mb-0" href="{% url 'home' %}">
+						<span class="icon-navbar"><i class="fa-solid fa-left-long"></i></span>
+						<span class="icon-navbar"><i class="fa-solid fa-house"></i></span>
+					</a>
+					{% comment %} <p class="nav-link pt-0 mt-0">Home</p> {% endcomment %}
 				</li>
 			</ul
 		</div>
@@ -158,17 +162,17 @@
 	<div class="row row-cols-3 g-5 mt-1 px-4 border-top border-orange border-4 mt-5">
 		<div class="col-4 border-top-3">
 			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
-			<label class="btn btn-outline-success orange-bg col-12 tile-title" for="option1">Hohe Erwartungen an Ergebnisse</label>
+			<label class="btn btn-outline-dark orange-bg col-12 tile-title" for="option1">Hohe Erwartungen an Ergebnisse</label>
 		</div>
 	
 		<div class="col-4">
 			<input type="radio" class="btn-check" name="options" id="option2" autocomplete="off" checked>
-			<label class="btn btn-outline-success orange-bg col-12 tile-title" for="option2">Schwierige Kollegenbeziehungen</label>
+			<label class="btn btn-outline-dark orange-bg col-12 tile-title" for="option2">Schwierige Kollegenbeziehungen</label>
 		</div>
 	
 		<div class="col-4">
 			<input type="radio" class="btn-check" name="options" id="option3" autocomplete="off" checked>
-			<label class="btn btn-outline-success orange-bg col-12 tile-title" for="option3">Emotionale Belastung</label>
+			<label class="btn btn-outline-dark orange-bg col-12 tile-title" for="option3">Emotionale Belastung</label>
 		</div>
 	</div>
 
