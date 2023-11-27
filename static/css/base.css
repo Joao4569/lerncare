@@ -11,34 +11,33 @@ body {
 	font-family: 'Raleway', sans-serif
 }
 
-/* Colors */
+/* Color */
 
 .orange-bg {
 	background-color: #ff8100f7 !important;
-}
-
-.nav-link {
-	font-family: 'Roboto', sans-serif;
-	color: black !important;
-	font-weight: 700;
-	font-size: 1.2rem;
-}
-
-.nav-link:hover {
-	color: white !important;
-}
-
-.copyright {
-	font-family: 'Roboto', sans-serif;
-	color: black !important;
-	font-weight: 700;
 }
 
 .text-black {
 	color: black !important;
 }
 
+/* Header */
+
+header {
+	height: 15vh;
+}
+
+/* Logo */
+
+.logo {
+	height: 9vh;
+}
+
 /* Footer */
+
+footer {
+	position: static;
+}
 
 .social-link-container {
     margin: 0.5rem 0 !important;
@@ -59,4 +58,20 @@ body {
 
 .footer-text {
 	font-weight: 500 !important;
+}
+
+.copyright {
+	font-family: 'Roboto', sans-serif;
+	color: black !important;
+	font-weight: 700;
+}
+
+/* Media queries */
+
+/* Screens larger than 720px in width */
+@media (min-width: 720px) {
+	footer {
+		position: fixed;
+		bottom: 0;
+	  }
 }

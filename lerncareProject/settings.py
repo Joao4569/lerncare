@@ -31,7 +31,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')  # Path to templates folder
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False  # Set to False for deployment
+DEBUG = True  # Set to False for deployment
 
 ALLOWED_HOSTS = ["lerncare-13184912aa8c.herokuapp.com", "127.0.0.1"]
 
@@ -94,8 +94,9 @@ DATABASES = {
 }
 
 if "DATABASE_URL" in os.environ:
-    DATABASES['default'] = dj_database_url.config(default=os.environ.get("DATABASE_URL"))
-
+    DATABASES['default'] = dj_database_url.config(
+        default=os.environ.get("DATABASE_URL")
+    )
 
 
 # Password validation

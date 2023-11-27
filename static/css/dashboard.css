@@ -1,7 +1,7 @@
 /* Navbar */
 
 .icon-navbar {
-    font-size: 1.8rem;
+    font-size: 1.5vh;
 }
 
 /* Tiles */
@@ -32,4 +32,14 @@
 .avatar-card {
     height: 80px;
     width: 80px;
+}
+
+
+/* Media queries */
+
+/* Screens larger than 720px in width */
+@media (min-width: 720px) {
+	footer {
+		clear: both;
+	  }
 }

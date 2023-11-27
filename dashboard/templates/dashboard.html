@@ -3,25 +3,24 @@
 
 {% load static %}
 
+<!-- This block contains the navigation bar -->
 {% block navbar %}
 
-<!-- This row contains the navigation bar -->
-<div class="row">
+<div class="container-fluid">
+	<div class="row">
 
-	<nav class="navbar navbar-expand orange-bg">
+		<nav class="navbar navbar-expand orange-bg">
+	
+			<div class="col-12">
+				<ul class="nav justify-content-center">
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'home' %}">Home</a>
+					</li>
+				</ul
+			</div>
+		</nav>
 
-		<div class="col-12">
-			<ul class="nav">
-				<li class="nav-item social-links">
-					<a class="nav-link pb-0 mb-0" href="{% url 'home' %}">
-						<span class="icon-navbar"><i class="fa-solid fa-left-long"></i></span>
-						<span class="icon-navbar"><i class="fa-solid fa-house"></i></span>
-					</a>
-					{% comment %} <p class="nav-link pt-0 mt-0">Home</p> {% endcomment %}
-				</li>
-			</ul
-		</div>
-	</nav>
+	</div>
 </div>
 
 {% endblock %}
@@ -31,8 +30,8 @@
 <!-- First row of dashboard -->
 
 <!-- Cards container -->
-<div class="contanier pt-2">
-	<div class="row row-cols-3 g-2 mt-1 px-2">
+<div class="contanier-fluid pt-2">
+	<div class="row row-cols-3 g-2 mt-1">
 
 		<!-- Avatar Card -->
 		<div class="col-3">
@@ -88,7 +87,7 @@
 	</div>
 
 	<!-- Second and third rows of dashboard -->
-	<div class="row row-cols-2 g-2 mt-1 px-2">
+	<div class="row row-cols-2 g-2 mt-1">
 
 		<!-- Ressourcen Card -->
 
@@ -159,7 +158,7 @@
 	<!-- Fourth row of dashboard -->
 
 	<!-- Topic selector tiles -->
-	<div class="row row-cols-3 g-2 mt-1 px-2 mt-5">
+	<div class="row row-cols-3 g-2 mt-1 tile-test">
 		<div class="col-4 border-top-3">
 			<input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
 			<label class="btn btn-outline-dark orange-bg col-12 tile-title" for="option1">Hohe Erwartungen an Ergebnisse</label>
