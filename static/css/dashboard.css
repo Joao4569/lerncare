@@ -24,6 +24,23 @@
 	font-family: 'Raleway', sans-serif
 }
 
+.main-topic-btn-selected {
+	background-color: black !important;
+	color: #ff8100f7 !important; 
+}
+
+.main-topic-btn {
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 1.3rem !important;
+}
+
+.main-topic-scroll {
+	color: #ff8100f7 !important;
+	font-weight: 900 !important;
+	font-size: 3rem !important;
+}
+
 /* Avatar tile */
 .avatar-card {
 	height: 80px;
@@ -37,9 +54,4 @@
 	footer {
 		clear: both;
 	}
-}
-
-.main-topic-btn-selected {
-	background-color: black !important;
-	color: #ff8100f7 !important; 
 }
