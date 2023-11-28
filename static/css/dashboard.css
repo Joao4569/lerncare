@@ -24,16 +24,11 @@
     font-family: 'Raleway', sans-serif
 }
 
-.btn-outline-success {
-    color: black !important;
-}
-
 /* Avatar tile */
 .avatar-card {
     height: 80px;
     width: 80px;
 }
-
 
 /* Media queries */
 
