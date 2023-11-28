@@ -1,33 +1,33 @@
 /* Navbar */
 
 .icon-navbar {
-    font-size: 1.5vh;
+	font-size: 1.5vh;
 }
 
 /* Tiles */
 
 .dropdown-pointer {
-    font-size: 1.5rem;
+	font-size: 1.5rem;
 }
 
 .tile-title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 600;
-    font-size: 2rem !important;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 600;
+	font-size: 2rem !important;
 }
 
 .tile-hover:hover {
-    color: white !important;
+	color: white !important;
 }
 
 .tile-content {
-    font-family: 'Raleway', sans-serif
+	font-family: 'Raleway', sans-serif
 }
 
 /* Avatar tile */
 .avatar-card {
-    height: 80px;
-    width: 80px;
+	height: 80px;
+	width: 80px;
 }
 
 /* Media queries */
@@ -36,5 +36,10 @@
 @media (min-width: 720px) {
 	footer {
 		clear: both;
-	  }
+	}
+}
+
+.main-topic-btn-selected {
+	background-color: black !important;
+	color: #ff8100f7 !important; 
 }

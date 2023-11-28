@@ -7,177 +7,182 @@
 {% block navbar %}
 
 <div class="container-fluid">
-	<div class="row">
-
-		<nav class="navbar navbar-expand orange-bg">
-	
-			<div class="col-12">
-				<ul class="nav justify-content-center">
-					<li class="nav-item">
-						<a class="nav-link" href="{% url 'home' %}">Home</a>
-					</li>
-				</ul
-			</div>
-		</nav>
-
-	</div>
-</div>
-
-{% endblock %}
-
-{% block content %}
-
-<!-- First row of dashboard -->
-
-<!-- Cards container -->
-<div class="contanier-fluid pt-2">
-	<div class="row row-cols-3 g-2 mt-1">
-
-		<!-- Avatar Card -->
-		<div class="col-3">
-			<div class="card orange-bg">
-				<div class="row">
-					<div class="col-4 text-center pt-2">
-						<img src="{% static "images/resized-avatar.png" %}" class="card-img-top img-thumbnail avatar-card" alt="...">
-					</div>
-					<div class="col-8 justify-content-center">
-						<h5 class="card-title pt-4 tile-title">Remo Stiefel</h5>
-					</div>
-				</div>
-
-				<div class="card-body">
-					<p class="card-text tile-content">Beschreibung.....</p>
-				</div>
-			</div>
-		</div>
-	
-		
-		<!-- Vignette Card -->
-
-		<div class="col-6">
-
-			<div class="btn-group col-12">
-				<button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
-					<button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Vignette</h5></button>
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
-					<li><p class="dropdown-item card-text tile-content" href="#">Vignette content here  I am a vignette I do this and that</p></li>
-				</ul>
-			</div>
-			
-		</div>
-	
-		<!-- Umfragen Card -->
-
-		<div class="col-3">
-
-			<div class="btn-group col-12">
-				<button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
-					<button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Umfragen</h5></button>
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
-					<li><p class="dropdown-item card-text tile-content" href="#">Umfragen content here  I am a Umfragen I do this and that</p></li>
-				</ul>
-			</div>
-			
-		</div>
-	
-	</div>
-
-	<!-- Second and third rows of dashboard aspects -->
-	<div class="row row-cols-2 g-2 mt-1">
-
-		<!-- Ressourcen Card -->
-
-		<div class="col-6">
-
-			<div class="btn-group col-12">
-				<button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
-					<button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Ressourcen</h5></button>
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
-					<li><p class="dropdown-item card-text tile-content" href="#">Ressourcen content here  I am a Ressourcen I do this and that</p></li>
-				</ul>
-			</div>
-			
-		</div>
-	
-		<!-- Herausforderung Card -->
-
-		<div class="col-6">
-
-			<div class="btn-group col-12">
-				<button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
-					<button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Herausforderung</h5></button>
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
-					<li><p class="dropdown-item card-text tile-content" href="#">Herausforderung content here  I am a Herausforderung I do this and that</p></li>
-				</ul>
-			</div>
-			
-		</div>
-
-		<!-- Attribute Card -->
-
-		<div class="col-6">
-
-			<div class="btn-group col-12">
-				<button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
-					<button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Attribute</h5></button>
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
-					<li><p class="dropdown-item card-text tile-content" href="#">Attribute content here  I am a Attribute I do this and that</p></li>
-				</ul>
-			</div>
-			
-		</div>
-	
-		<!-- Interview Card -->
-
-		<div class="col-6">
-
-			<div class="btn-group col-12">
-				<button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
-					<button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Interview</h5></button>
-					<span class="visually-hidden">Toggle Dropdown</span>
-				</button>
-				<ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
-					<li><p class="dropdown-item card-text tile-content" href="#">Interview content here  I am a Interview I do this and that</p></li>
-				</ul>
-			</div>
-			
-		</div>
-
-	</div>
-
-	<!-- Fourth row of dashboard aspects -->
-
-	<!-- Main topic selector tiles -->
-	<div class="row row-cols-3 g-2 mt-1">
-		<div class="col-4">
-			<button type="button" class="btn orange-bg col-12 tile-title rounded-pill btn-state" data-bs-toggle="button" autocomplete="off">
-				Hohe Erwartungen an Ergebnisse
-			</button>
-		</div>
-	
-		<div class="col-4">
-			<button type="button" class="btn orange-bg col-12 tile-title rounded-pill btn-state" data-bs-toggle="button" autocomplete="off">
-				Schwierige Kollegenbeziehungen
-			</button>
-		</div>
-	
-		<div class="col-4">
-			<button type="button" class="btn orange-bg col-12 tile-title rounded-pill btn-state" data-bs-toggle="button" autocomplete="off">
-				Emotionale Belastung
-			</button>
-		</div>
-	</div>
-
-</div>
-
-{% endblock %}
+  <div class="row">
+    
+    <nav class="navbar navbar-expand orange-bg">
+      
+      <div class="col-12">
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Home</a>
+          </li>
+          </ul
+        </div>
+      </nav>
+      
+    </div>
+  </div>
+  
+  {% endblock %}
+  
+  {% block content %}
+  
+  <!-- First row of dashboard -->
+  
+  <!-- Cards container -->
+  <div class="contanier-fluid pt-2">
+    <div class="row row-cols-3 g-2 mt-1">
+      
+      <!-- Avatar Card -->
+      <div class="col-3">
+        <div class="card orange-bg">
+          <div class="row">
+            <div class="col-4 text-center pt-2">
+              <img src="{% static "images/resized-avatar.png" %}" class="card-img-top img-thumbnail avatar-card" alt="...">
+            </div>
+            <div class="col-8 justify-content-center">
+              <h5 class="card-title pt-4 tile-title">Remo Stiefel</h5>
+            </div>
+          </div>
+          
+          <div class="card-body">
+            <p class="card-text tile-content">Beschreibung.....</p>
+          </div>
+        </div>
+      </div>
+      
+      
+      <!-- Vignette Card -->
+      
+      <div class="col-6">
+        
+        <div class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
+            <button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Vignette</h5></button>
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+            <li><p class="dropdown-item card-text tile-content" href="#">Vignette content here  I am a vignette I do this and that</p></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Umfragen Card -->
+      
+      <div class="col-3">
+        
+        <div class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
+            <button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Umfragen</h5></button>
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+            <li><p class="dropdown-item card-text tile-content" href="#">Umfragen content here  I am a Umfragen I do this and that</p></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <!-- Second and third rows of dashboard aspects -->
+    <div class="row row-cols-2 g-2 mt-1">
+      
+      <!-- Ressourcen Card -->
+      
+      <div class="col-6">
+        
+        <div class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
+            <button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Ressourcen</h5></button>
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+            <li><p class="dropdown-item card-text tile-content" href="#">Ressourcen content here  I am a Ressourcen I do this and that</p></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Herausforderung Card -->
+      
+      <div class="col-6">
+        
+        <div class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
+            <button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Herausforderung</h5></button>
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+            <li><p class="dropdown-item card-text tile-content" href="#">Herausforderung content here  I am a Herausforderung I do this and that</p></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Attribute Card -->
+      
+      <div class="col-6">
+        
+        <div class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
+            <button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Attribute</h5></button>
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+            <li><p class="dropdown-item card-text tile-content" href="#">Attribute content here  I am a Attribute I do this and that</p></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+      <!-- Interview Card -->
+      
+      <div class="col-6">
+        
+        <div class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-pointer dropdown-toggle dropdown-toggle-split col-1 py-4 tile-hover" data-bs-toggle="dropdown" 			aria-expanded="false">
+            <button type="button" class="btn orange-bg col-11 text-center py-4 rounded-end tile-hover"><h5 class=" tile-title">Interview</h5></button>
+            <span class="visually-hidden">Toggle Dropdown</span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
+            <li><p class="dropdown-item card-text tile-content" href="#">Interview content here  I am a Interview I do this and that</p></li>
+          </ul>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+    <!-- Fourth row of dashboard aspects -->
+    
+    <!-- Main topic selector tiles -->
+    <div class="row row-cols-3 g-2 mt-1">
+      <div class="col-4">
+        <button type="button" class="btn orange-bg col-12 tile-title rounded-pill main-topic-btn" data-bs-toggle="button" autocomplete="off">
+          Hohe Erwartungen an Ergebnisse
+        </button>
+      </div>
+      
+      <div class="col-4">
+        <button type="button" class="btn orange-bg col-12 tile-title rounded-pill main-topic-btn" data-bs-toggle="button" autocomplete="off">
+          Schwierige Kollegenbeziehungen
+        </button>
+      </div>
+      
+      <div class="col-4">
+        <button type="button" class="btn orange-bg col-12 tile-title rounded-pill main-topic-btn" data-bs-toggle="button" autocomplete="off">
+          Emotionale Belastung
+        </button>
+      </div>
+    </div>
+    
+  </div>
+  
+  {% endblock %}
+  
+  {% block extra_js %}
+  <!-- Main topic button state change js for indication of which button is selected -->
+  <script src="{% static 'js/main_topic_btn_state.js' %}"></script>
+  {% endblock %}
