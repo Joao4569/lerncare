@@ -1,14 +1,12 @@
 // Get all the main topic buttons
-var main_topic_btns = document.getElementsByClassName("main-topic-btn");
+let main_topic_btns = document.getElementsByClassName("main-topic-btn");
 
 // Loop through the main topic buttons
-for (var i = 0; i < main_topic_btns.length; i++) {
-
+for (let btn of main_topic_btns) {
     // Add a click event listener to each button
-    main_topic_btns[i].addEventListener("click", function() {
-
+    btn.addEventListener("click", function() {
         // Get the currently selected button
-        var current = document.getElementsByClassName("main-topic-btn-selected");
+        let current = document.getElementsByClassName("main-topic-btn-selected");
 
         // If there is a currently selected button, remove the class from it
         if (current.length > 0) {
