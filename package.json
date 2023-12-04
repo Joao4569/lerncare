@@ -1,0 +1,16 @@
+{
+  "name": "lerncare",
+  "version": "1.0.0",
+  "description": "* [Conception](#conception)\r   * [Scope](#scope)\r   * [Wireframes](#wireframes)",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jsdom": "^23.0.1"
+  }
+}
