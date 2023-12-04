@@ -161,6 +161,7 @@
 
     <!-- Row with 3 main topics -->
     <div class="row g-2 mt-3">
+
        <!-- Carousel previous button -->
        <div class="col-2 d-flex justify-content-center align-items-center">
         <button id="prev-button" type="button" class="btn">
@@ -171,7 +172,7 @@
       <!-- Visible main topic left -->
       <div class="col-2">
         <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3">
-          {{ main_topics.0.name }}
+          
         </button>
       </div>
 
@@ -181,7 +182,7 @@
       <!-- Schwierige Kollegenbeziehungen -->
       <div class="col-2">
         <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3">
-          {{ main_topics.1.name }}
+          
         </button>
       </div>
 
@@ -191,7 +192,7 @@
       <!-- Emotionale Belastung -->
       <div class="col-2">
         <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3">
-          {{ main_topics.2.name }}
+          
         </button>
       </div>
 
@@ -210,4 +211,12 @@
   {% block extra_js %}
   <!-- Main topic button state change js for indication of which button is selected -->
   <script src="{% static 'js/dashboard/main_topic_btn_state.js' %}"></script>
+  <script>
+      mainTopics = [];
+          {% for topic in main_topics %}
+          mainTopics.push("{{ topic.name }}"),
+          {% endfor %}
+      console.log(mainTopics);
+  </script>
+  <script src="{% static 'js/dashboard/main_topics.js' %}"></script>
   {% endblock %}
