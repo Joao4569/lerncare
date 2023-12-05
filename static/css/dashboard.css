@@ -10,6 +10,11 @@
 	font-size: 1.5rem;
 }
 
+.dropdown-header {
+	font-weight: 500 !important;
+	color: white !important;
+}
+
 .tile-title {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
