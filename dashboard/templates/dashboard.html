@@ -155,50 +155,52 @@
       
     </div>
     
-    <!-- Fourth row of dashboard aspects -->
+    <!-- Fourth row - Main topics -->
 
     <!-- New Main Topic Carousel -->
 
-    <!-- Row with 3 main topics -->
-    <div class="row g-2 mt-3">
+    <!-- Row with 3 main topics and nav buttons -->
+    <div class="row g-2 mt-3 mb-3">
 
        <!-- Carousel previous button -->
        <div class="col-2 d-flex justify-content-center align-items-center">
-        <button id="prev-button" type="button" class="btn">
+        <button id="prev-button" type="button" class="btn rounded-circle" data-bs-toggle="button" autocomplete="off">
+          <!-- Font awesome icon -->
           <i class="fa-solid fa-circle-arrow-left main-topic-scroll"></i>
       </button>
       </div>
 
       <!-- Visible main topic left -->
       <div class="col-2">
-        <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3">
-          
+        <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3" data-bs-toggle="button" autocomplete="off">
+          <!-- Content from main_topics.js -->
         </button>
       </div>
 
       <!-- Empty column -->
       <div class="col-1"></div>
       
-      <!-- Schwierige Kollegenbeziehungen -->
+      <!-- Visible main topic centre -->
       <div class="col-2">
-        <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3">
-          
+        <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3" data-bs-toggle="button" autocomplete="off">
+          <!-- Content from main_topics.js -->
         </button>
       </div>
 
       <!-- Empty column -->
       <div class="col-1"></div>
       
-      <!-- Emotionale Belastung -->
+      <!-- Visible main topic right -->
       <div class="col-2">
-        <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3">
-          
+        <button class="btn orange-bg col-12 rounded-pill main-topic-btn p-3" data-bs-toggle="button" autocomplete="off">
+          <!-- Content from main_topics.js -->
         </button>
       </div>
 
       <!-- Carousel next button -->
       <div class="col-2 d-flex justify-content-center align-items-center">
-        <button id="next-button" type="button" class="btn">
+        <button id="next-button" type="button" class="btn rounded-circle" data-bs-toggle="button" autocomplete="off">
+          <!-- Font awesome icon -->
           <i class="fa-solid fa-circle-arrow-right main-topic-scroll"></i>
         </button>
       </div>
@@ -211,6 +213,8 @@
   {% block extra_js %}
   <!-- Main topic button state change js for indication of which button is selected -->
   <script src="{% static 'js/dashboard/main_topic_btn_state.js' %}"></script>
+
+  <!-- This script will compile a list of main topic names for main_topics.js -->
   <script>
       mainTopics = [];
           {% for topic in main_topics %}
@@ -218,5 +222,7 @@
           {% endfor %}
       console.log(mainTopics);
   </script>
+
+  <!-- MAin topic carousel behaviour script -->
   <script src="{% static 'js/dashboard/main_topics.js' %}"></script>
   {% endblock %}
