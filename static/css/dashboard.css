@@ -4,8 +4,15 @@
 	font-size: 1.5vh;
 }
 
-/* Tiles */
+/* Aspect Tiles */
 
+/* Avatar aspect tile */
+.avatar-card {
+	height: 80px;
+	width: 80px;
+}
+
+/* Aspect tiles - general */
 .dropdown-pointer {
 	font-size: 1.5rem;
 }
@@ -29,6 +36,8 @@
 	font-family: 'Raleway', sans-serif
 }
 
+/* Main topic carousel */
+
 .main-topic-btn-selected {
 	background-color: black !important;
 	color: #ff8100f7 !important; 
@@ -46,10 +55,9 @@
 	font-size: 3rem !important;
 }
 
-/* Avatar tile */
-.avatar-card {
-	height: 80px;
-	width: 80px;
+.carousel-nav:focus {
+	box-shadow: none; /* Removes Bootstrap's default glow */
+  background-color: black !important;
 }
 
 /* Media queries */
