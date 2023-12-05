@@ -52,14 +52,14 @@
       </div>
       
       
-      <!-- Vignette Card -->
+      <!-- Vignette aspect button -->
       
       <div class="col-6">
 
         <!-- Bootstrap dropdown button structure -->
-        <div class="btn-group col-12">
-          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false">
-            <span class=" tile-title">Vignette </span>
+        <div id="vignette-btn" class="btn-group col-12">
+          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false"><!--  disabled -->
+            <span class="tile-title">Vignette </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
             <li>
@@ -111,7 +111,7 @@
         
         <!-- Bootstrap dropdown button structure -->
         <div class="btn-group col-12">
-          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false"><!--  disabled -->
             <span class=" tile-title">Ressourcen </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
@@ -135,7 +135,7 @@
         
         <!-- Bootstrap dropdown button structure -->
         <div class="btn-group col-12">
-          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false"><!--  disabled -->
             <span class=" tile-title">Herausforderung </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
@@ -159,7 +159,7 @@
         
         <!-- Bootstrap dropdown button structure -->
         <div class="btn-group col-12">
-          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false"><!--  disabled -->
             <span class=" tile-title">Attribute </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
@@ -183,7 +183,7 @@
         
         <!-- Bootstrap dropdown button structure -->
         <div class="btn-group col-12">
-          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false">
+          <button type="button" class="btn orange-bg dropdown-toggle col-12 py-4 tile-hover" data-bs-toggle="dropdown" aria-expanded="false"><!--  disabled -->
             <span class=" tile-title">Interview </span>
           </button>
           <ul class="dropdown-menu dropdown-menu-start dropdown-menu-dark">
@@ -259,6 +259,10 @@
   {% endblock %}
   
   {% block extra_js %}
+
+  <!-- This script will store custom information in the session -->
+  {% comment %} <script src="{% static 'js/dashboard/custom_session_info.js' %}"></script> {% endcomment %}
+
   <!-- Main topic button state change js for indication of which button is selected -->
   <script src="{% static 'js/dashboard/main_topic_btn_state.js' %}"></script>
 
@@ -271,7 +275,7 @@
       console.log(mainTopics);
   </script>
 
-  <!-- Main topic carousel behaviour script -->
-  <script src="{% static 'js/dashboard/main_topics.js' %}"></script>
+  <!-- Main topic carousel script -->
+  <script src="{% static 'js/dashboard/main_topic_carousel.js' %}"></script>
 
   {% endblock %}
