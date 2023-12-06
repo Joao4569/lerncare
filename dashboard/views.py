@@ -35,4 +35,10 @@ class Vignette(View):
     def get(self, request):
         """A view to return the vignette page."""
 
-        return render(request, 'vignette.html')
+        user_main_topic = request.GET.get('mainTopicName')
+        user_aspect = request.GET.get('userSelectedAspect')
+        print(user_main_topic)
+        return render(request, 'vignette.html', {
+            'user_main_topic': user_main_topic,
+            'user_aspect': user_aspect,
+        })

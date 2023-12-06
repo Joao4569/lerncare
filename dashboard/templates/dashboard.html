@@ -261,6 +261,7 @@
   {% block extra_js %}
 
   <!-- This script will store custom information in the session -->
+  <script src="{% static 'js/dashboard/custom_session_info.js' %}"></script>
   
 
   <!-- Main topic button state change js for indication of which button is selected -->
@@ -269,10 +270,12 @@
   <!-- This script will compile a list of main topic names for main_topics.js -->
   <script>
       mainTopics = [];
-          {% for topic in main_topics %}
-          mainTopics.push("{{ topic.friendly_name }}"),
-          {% endfor %}
-      console.log(mainTopics);
+      {% for topic in main_topics %}
+          mainTopics.push({
+            friendlyName: "{{ topic.friendly_name }}",
+            programmaticName: "{{ topic.programmatic_name }}"
+          });
+      {% endfor %}
   </script>
 
   <!-- Main topic carousel script -->

@@ -29,7 +29,7 @@ function mainTopicBtnState() {
             this.className += " main-topic-btn-selected";
 
             // Collect main topic name in session storage - js/dashboard/custom_session_info.js
-            //currentMainTopicSessionExtraction()
+            currentMainTopicSessionExtraction()
         });
     }
 }
