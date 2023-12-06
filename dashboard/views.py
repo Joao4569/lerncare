@@ -18,7 +18,9 @@ class Dashboard(View):
             'main_topics': main_topics,
         }
 
-        # custom_session_info = {
+        return render(request, 'dashboard.html', context)
+        # , custom_session_info, user_main_topic, user_aspect
+# custom_session_info = {
         #     'user_main_topic': request.GET.get('mainTopicName'),
         #     'user_aspect': request.GET.get('userSelectedAspect'),
         # }
@@ -26,5 +28,11 @@ class Dashboard(View):
         # user_aspect = request.GET.get('userSelectedAspect')
         # print(user_main_topic)
 
-        return render(request, 'dashboard.html', context)
-        # , custom_session_info, user_main_topic, user_aspect
+
+class Vignette(View):
+    """ This will handle the vignette view and it's content"""
+
+    def get(self, request):
+        """A view to return the vignette page."""
+
+        return render(request, 'vignette.html')
