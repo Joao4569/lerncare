@@ -16,4 +16,13 @@ class Dashboard(View):
             'main_topics': main_topics,
         }
 
+        # custom_session_info = {
+        #     'user_main_topic': request.GET.get('mainTopicName'),
+        #     'user_aspect': request.GET.get('userSelectedAspect'),
+        # }
+        # user_main_topic = request.GET.get('mainTopicName')
+        # user_aspect = request.GET.get('userSelectedAspect')
+        # print(user_main_topic)
+
         return render(request, 'dashboard.html', context)
+        # , custom_session_info, user_main_topic, user_aspect

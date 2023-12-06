@@ -17,7 +17,7 @@ document.getElementById('vignette-btn').addEventListener('click', function(event
 // When the Vignette aspect button link is clicked
 // document.querySelector('.dropdown-item').addEventListener('click', function(event) {
 //     event.preventDefault();
-//     let mainTopic = sessionStorage.getItem('mainTopic');
-//     let aspectTile = sessionStorage.getItem('aspectTile');
+//     let mainTopic = sessionStorage.getItem('mainTopicName');
+//     let aspectTile = sessionStorage.getItem('userSelectedAspect');
 //     window.location.href = this.href + '?mainTopic=' + mainTopic + '&aspectTile=' + aspectTile;
 // });
