@@ -46,15 +46,3 @@ function clearMainTopicBtnState() {
     }
 
 }
-
-// TESTING
-
-// Function to able aspect tile buttons upon main topic selection
-// function aspectTileBtnState() {
-
-
-    
-
-// }
-
-// TESTING

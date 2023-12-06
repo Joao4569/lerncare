@@ -6,16 +6,16 @@ function currentMainTopicSessionExtraction() {
 }
 
 // This function is called when the aspect button is clicked and sets the aspect name in a session variable
-document.getElementById('vignette-btn').addEventListener('click', function(event) {
-    event.preventDefault();
-    let userSelectedAspect = 'vignette';
-    sessionStorage.setItem('userSelectedAspect', userSelectedAspect);
-});
+// document.getElementById('vignette-btn').addEventListener('click', function(event) {
+//     event.preventDefault();
+//     let userSelectedAspect = 'vignette';
+//     sessionStorage.setItem('userSelectedAspect', userSelectedAspect);
+// });
 
 // When the Vignette aspect button link is clicked
 document.querySelector('.dropdown-item').addEventListener('click', function(event) {
     event.preventDefault();
     let mainTopic = sessionStorage.getItem('mainTopicName');
-    let aspectTile = sessionStorage.getItem('userSelectedAspect');
+    // let aspectTile = sessionStorage.getItem('userSelectedAspect');
     window.location.href = this.href + mainTopic + '/';
 });
