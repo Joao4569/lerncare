@@ -28,12 +28,8 @@ function mainTopicBtnState() {
             // Add the class to the clicked button
             this.className += " main-topic-btn-selected";
 
-            // TESTING
-            aspectTileBtnState();
-            // TESTING
-
             // Collect main topic name in session storage - js/dashboard/custom_session_info.js
-            currentMainTopicSessionExtraction()
+            //currentMainTopicSessionExtraction()
         });
     }
 }
@@ -54,19 +50,11 @@ function clearMainTopicBtnState() {
 // TESTING
 
 // Function to able aspect tile buttons upon main topic selection
-function aspectTileBtnState() {
+// function aspectTileBtnState() {
 
-    // Get the currently selected button
-    let currently_disabled_buttons = document.getElementsByClassName("disabled");
-    console.log(currently_disabled_buttons);
-    // If there is a currently selected button, remove the class from it
-    if (currently_disabled_buttons.length > 0) {
-        current[0].className = current[0].className.replace(" disabled", "");
-    }
-    console.log('success');
 
     
 
-}
+// }
 
 // TESTING
