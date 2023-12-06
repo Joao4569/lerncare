@@ -57,7 +57,10 @@
 
 .carousel-nav:focus {
 	box-shadow: none; /* Removes Bootstrap's default glow */
-  background-color: black !important;
+}
+
+.carousel-nav:active {
+	background-color: black !important;
 }
 
 /* Media queries */

@@ -11,6 +11,8 @@ class Dashboard(View):
 
     def get(self, request):
         """A view to return the dashboard page."""
+
+        # pylint: disable=no-member
         main_topics = MainTopic.objects.all().order_by('position')
         context = {
             'main_topics': main_topics,

@@ -68,6 +68,7 @@ class AspectContent(models.Model):
     )
     aspect_content_item = models.TextField(null=False, blank=False)
 
+    # pylint: disable=no-member
     def __str__(self):
         """This will modify the standard Django string method for
         personalisation on admin site"""
