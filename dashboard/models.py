@@ -32,6 +32,10 @@ class MainTopic(models.Model):
         default='Friendly name here'
         )
 
+    # pylint: disable=invalid-str-returned
+    def __str__(self):
+        return self.friendly_name
+
 
 class Aspect(models.Model):
     """ Aspect model to store aspects for each main topic """
@@ -50,6 +54,10 @@ class Aspect(models.Model):
         default='Friendly name here'
         )
     description = models.TextField(null=False, blank=False)
+
+    # pylint: disable=invalid-str-returned
+    def __str__(self):
+        return self.friendly_name
 
 
 class AspectContent(models.Model):
