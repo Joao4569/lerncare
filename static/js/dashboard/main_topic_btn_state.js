@@ -1,17 +1,16 @@
 // Get all the main topic buttons
 let main_topic_btns = document.getElementsByClassName("main-topic-btn");
 
-//  Triggered by: dashboard.html
-mainTopicBtnState();
-
 // Listen for previous buttons clicks and clear selected main topic button
 document.getElementById("prev-button").addEventListener("click", function() {
-    clearMainTopicBtnState()
+    clearMainTopicBtnState();
+    addDisabledClass();
 });
 
 // Listen for previous buttons clicks and clear selected main topic button
 document.getElementById("next-button").addEventListener("click", function() {
-    clearMainTopicBtnState()
+    clearMainTopicBtnState();
+    addDisabledClass();
 });
 
 // Function to change the state of the main topic buttons with user input
@@ -27,6 +26,9 @@ function mainTopicBtnState() {
 
             // Add the class to the clicked button
             this.className += " main-topic-btn-selected";
+
+            // Change aspect tiles from disabled to enabled
+            removeDisabledClass();
 
             // Collect main topic name in session storage - js/dashboard/custom_session_info.js
             currentMainTopicSessionExtraction()
@@ -46,3 +48,35 @@ function clearMainTopicBtnState() {
     }
 
 }
+
+// This function will remove the "disabled" class from all elements with the class name "disabled"
+function removeDisabledClass() {
+    // Select all elements with the class name "disabled"
+    let disabledAspectTiles = document.getElementsByClassName(' disabled');
+
+    // Since getElementsByClassName returns a live HTMLCollection, 
+    // we need to convert it to an array to avoid modifying the collection while iterating over it
+    disabledAspectTiles = Array.from(disabledAspectTiles);
+
+    // Iterate over the elements and remove the "disabled" class
+    for (let disabledAspectTile of disabledAspectTiles) {
+        disabledAspectTile.classList.remove('disabled');
+    }
+}
+
+function addDisabledClass() {
+    // Select all elements with the class name "main-topic-btn"
+    let enabledAspectTiles = document.getElementsByClassName('aspect-tile');
+
+    // Since getElementsByClassName returns a live HTMLCollection, 
+    // we need to convert it to an array to avoid modifying the collection while iterating over it
+    enabledAspectTiles = Array.from(enabledAspectTiles);
+
+    // Iterate over the elements and add the "disabled" class
+    for (let enabledAspectTile of enabledAspectTiles) {
+        enabledAspectTile.classList.add('disabled');
+    }
+}
+
+//  Triggered by: dashboard.html
+mainTopicBtnState();

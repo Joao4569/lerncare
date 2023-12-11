@@ -1,4 +1,6 @@
-function updateButtons(currentStartIndex, buttons, mainTopics) {
+// This function is used to allocate the content as well as
+// unique ID to each main topic button in the carousel
+function updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics) {
     for (let i = 0; i < 3; i++) {
         if (mainTopics[currentStartIndex + i]) {
             buttons[i].innerText = mainTopics[currentStartIndex + i].friendlyName;
@@ -7,6 +9,7 @@ function updateButtons(currentStartIndex, buttons, mainTopics) {
     }
 }
 
+// This function controls the carousel behavior of the main topic buttons
 function mainTopicCarousel() {
     let currentStartIndex = 0;
 
@@ -14,13 +17,13 @@ function mainTopicCarousel() {
     let buttons = document.getElementsByClassName('main-topic-btn');
 
     // Update the buttons when the page loads
-    updateButtons(currentStartIndex, buttons, mainTopics);
+    updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
 
     // Listen for previous button clicks and update the buttons
     document.getElementById('prev-button').addEventListener('click', function() {
         if (currentStartIndex > 0) {
             currentStartIndex--;
-            updateButtons(currentStartIndex, buttons, mainTopics);
+            updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
         }
     });
 
@@ -28,9 +31,10 @@ function mainTopicCarousel() {
     document.getElementById('next-button').addEventListener('click', function() {
         if (currentStartIndex < mainTopics.length - 3) {
             currentStartIndex++;
-            updateButtons(currentStartIndex, buttons, mainTopics);
+            updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
         }
     });
 }
 
+// Call the main topic carousel function
 mainTopicCarousel();
