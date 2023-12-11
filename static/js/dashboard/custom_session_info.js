@@ -12,7 +12,7 @@ document.getElementById('vignette').addEventListener('click', function(event) {
     sessionStorage.setItem('userSelectedAspect', userSelectedAspect);
 });
 
-// This will allocate the user selected aspect and maintopic names to the url
+// This will allocate the user selected aspect and mainTopic names to the url
 document.querySelector('.dropdown-item').addEventListener('click', function(event) {
     event.preventDefault();
     let mainTopic = sessionStorage.getItem('mainTopicName');

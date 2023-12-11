@@ -5,9 +5,22 @@
 
 {% block content %}
 <div class="row container-fluid">
-    <div class="col-12 orange-bg">
-        <h1 class="text-black"> Testing Successfull {{ user_aspect }}</h1>
-    </div>
+
+    <!-- Loop through aspect content -->
+    {% for aspect in aspect_content %}
+
+      <!-- Filter for aspect content with the aspect of vignette and the user selected main topic -->
+      {% if aspect.aspect.programmatic_name == aspect_selected and aspect.topic.programmatic_name == topic_selected %}
+        <div class="col-12 orange-bg">
+          <h1 class="text-black">Selected Aspect = {{ aspect_selected }}</h1>
+          <h1 class="text-black">Aspect Programmatic name = {{ aspect.aspect.programmatic_name }}</h1>
+          <h1 class="text-black"> Testing Successfull Main topic = {{ aspect.topic.programmatic_name }}</h1>
+          <h2 class="text-black ">Aspect = {{ aspect.aspect }}</h2>
+          <p class="text-black">Aspect Content = {{ aspect.aspect_content_item }}</p>
+        </div>
+      {% endif %}
+      
+    {% endfor %}
 </div>
 {% endblock content %}
 ```
