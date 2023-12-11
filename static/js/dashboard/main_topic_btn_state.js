@@ -64,6 +64,7 @@ function removeDisabledClass() {
     }
 }
 
+// This function will add the "disabled" class to all elements with the class name "aspect-tile"
 function addDisabledClass() {
     // Select all elements with the class name "main-topic-btn"
     let enabledAspectTiles = document.getElementsByClassName('aspect-tile');
