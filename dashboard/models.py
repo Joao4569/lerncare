@@ -63,6 +63,12 @@ class Aspect(models.Model):
 class Keyword(models.Model):
     """ Keyword model for storing keywords for each aspect. """
 
+    topic = models.ForeignKey(
+        'MainTopic',
+        on_delete=models.CASCADE,
+        null=True,
+    )
+
     keyword = models.CharField(
         max_length=100,
         null=False,
