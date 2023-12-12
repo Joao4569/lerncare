@@ -3,7 +3,7 @@ django.views, as well as the MainTopic model from the
 dashboard app """
 from django.shortcuts import render
 from django.views import View
-from .models import MainTopic, AspectContent
+from .models import MainTopic, Vignette
 
 
 class Dashboard(View):
@@ -19,17 +19,9 @@ class Dashboard(View):
         }
 
         return render(request, 'dashboard.html', context)
-        # , custom_session_info, user_main_topic, user_aspect
-# custom_session_info = {
-        #     'user_main_topic': request.GET.get('mainTopicName'),
-        #     'user_aspect': request.GET.get('userSelectedAspect'),
-        # }
-        # user_main_topic = request.GET.get('mainTopicName')
-        # user_aspect = request.GET.get('userSelectedAspect')
-        # print(user_main_topic)
 
 
-class Vignette(View):
+class VignetteView(View):
     """ This will handle the vignette view and it's content"""
 
     def get(self, request, main_topic):
@@ -39,9 +31,9 @@ class Vignette(View):
         aspect_selected = "vignette"
 
         # pylint: disable=no-member
-        aspect_content = AspectContent.objects.all()
+        vignette_content = Vignette.objects.all()
         context = {
-            'aspect_content': aspect_content,
+            'vignette_content': vignette_content,
             'aspect_selected': aspect_selected,
             'topic_selected': topic_selected,
         }

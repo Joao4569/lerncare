@@ -8,5 +8,8 @@ urlpatterns = [
     path('', views.Dashboard.as_view(), name='dashboard'),
 
     # vignette page
-    path('vignette/<str:main_topic>/', views.Vignette.as_view(), name='vignette'),
+    path(
+        'vignette/<str:main_topic>/',
+        views.VignetteView.as_view(),
+        name='vignette'),
 ]

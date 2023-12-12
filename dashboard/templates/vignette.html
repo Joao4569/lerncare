@@ -7,16 +7,21 @@
 <div class="row container-fluid">
 
     <!-- Loop through aspect content -->
-    {% for aspect in aspect_content %}
+    {% for vignette in vignette_content %}
 
       <!-- Filter for aspect content with the aspect of vignette and the user selected main topic -->
-      {% if aspect.aspect.programmatic_name == aspect_selected and aspect.topic.programmatic_name == topic_selected %}
+      {% if vignette.aspect.programmatic_name == aspect_selected and vignette.topic.programmatic_name == topic_selected %}
         <div class="col-12 orange-bg">
           <h1 class="text-black">Selected Aspect = {{ aspect_selected }}</h1>
-          <h1 class="text-black">Aspect Programmatic name = {{ aspect.aspect.programmatic_name }}</h1>
-          <h1 class="text-black"> Testing Successfull Main topic = {{ aspect.topic.programmatic_name }}</h1>
-          <h2 class="text-black ">Aspect = {{ aspect.aspect }}</h2>
-          <p class="text-black">Aspect Content = {{ aspect.aspect_content_item }}</p>
+          <h1 class="text-black">Aspect Programmatic name = {{ vignette.aspect.programmatic_name }}</h1>
+          <h1 class="text-black"> Testing Successfull Main topic = {{ vignette.topic.programmatic_name }}</h1>
+          <h2 class="text-black ">Aspect = {{ vignette.aspect }}</h2>
+          <p class="text-black">Title Content = {{ vignette.title }}</p>
+          <p class="text-black">Situation Content = {{ vignette.situation }}</p>
+          <p class="text-black">Question Content = {{ vignette.question }}</p>
+          {% for keyword in vignette.keywords.all %}
+            <p class="text-black">Keyword Content = {{ keyword.keyword }}</p>
+          {% endfor %}
         </div>
       {% endif %}
       
