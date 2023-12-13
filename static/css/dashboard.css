@@ -38,6 +38,10 @@
 
 /* Main topic carousel */
 
+.carousel-container {
+	height: 20vh;
+}
+
 .main-topic-btn-selected {
 	background-color: #643E1C;
 	color: #f98f23; 
@@ -77,9 +81,9 @@
 
 /* Media queries */
 
-/* Screens larger than 720px in width */
-@media (min-width: 720px) {
+/* Screens with a maximum width of 720px (screens with width of 720px or less) */
+@media (max-height: 720px) {
 	footer {
-		clear: both;
+		position: static;
 	}
 }

@@ -36,7 +36,8 @@ header {
 /* Footer */
 
 footer {
-	position: static;
+	position: fixed;
+	bottom: 0;
 }
 
 .social-link-container {
@@ -64,14 +65,4 @@ footer {
 	font-family: 'Roboto', sans-serif;
 	color: #534439;
 	font-weight: 700;
-}
-
-/* Media queries */
-
-/* Screens larger than 720px in width */
-@media (min-width: 720px) {
-	footer {
-		position: fixed;
-		bottom: 0;
-	  }
 }
