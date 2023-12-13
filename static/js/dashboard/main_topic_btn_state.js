@@ -49,33 +49,57 @@ function clearMainTopicBtnState() {
 
 }
 
-// This function will remove the "disabled" class from all elements with the class name "disabled"
+// This function will remove the "disabled" class to all elements with the class
+// name of "aspect-tile" and "navbar-custom-btn" in order to enable them
+// when a main topic is selected by the user.
 function removeDisabledClass() {
-    // Select all elements with the class name "disabled"
-    let disabledAspectTiles = document.getElementsByClassName(' disabled');
+
+    // Select all aspect tile elements
+    let disabledAspectTiles = document.getElementsByClassName('aspect-tile');
+
+    // Select all navbar elements related to the aspect tiles.
+    let disabledNavbarBtns = document.getElementsByClassName('navbar-custom-btn');
 
     // Since getElementsByClassName returns a live HTMLCollection, 
-    // we need to convert it to an array to avoid modifying the collection while iterating over it
+    // we need to convert it to an array to avoid modifying the collection while iterating over it.
     disabledAspectTiles = Array.from(disabledAspectTiles);
+
+    disabledNavbarBtns = Array.from(disabledNavbarBtns);
 
     // Iterate over the elements and remove the "disabled" class
     for (let disabledAspectTile of disabledAspectTiles) {
         disabledAspectTile.classList.remove('disabled');
     }
+
+    for (let disabledNavbarBtn of disabledNavbarBtns) {
+        disabledNavbarBtn.classList.remove('disabled');
+    }
 }
 
-// This function will add the "disabled" class to all elements with the class name "aspect-tile"
+// This function will add the "disabled" class to all elements with the class
+// name of "aspect-tile" and "navbar-custom-btn" in order to disable them
+// when no main topic is selected.
 function addDisabledClass() {
-    // Select all elements with the class name "main-topic-btn"
+
+    // Select all aspect tile elements
     let enabledAspectTiles = document.getElementsByClassName('aspect-tile');
 
+    // Select all navbar elements related to the aspect tiles
+    let enabledNavbarBtns = document.getElementsByClassName('navbar-custom-btn');
+
     // Since getElementsByClassName returns a live HTMLCollection, 
-    // we need to convert it to an array to avoid modifying the collection while iterating over it
+    // we need to convert it to an array to avoid modifying the collection while iterating over it.
     enabledAspectTiles = Array.from(enabledAspectTiles);
 
-    // Iterate over the elements and add the "disabled" class
+    enabledNavbarBtns = Array.from(enabledNavbarBtns);
+
+    // Iterate over the elements and add the "disabled" class.
     for (let enabledAspectTile of enabledAspectTiles) {
         enabledAspectTile.classList.add('disabled');
+    }
+
+    for (let enabledNavbarBtn of enabledNavbarBtns) {
+        enabledNavbarBtn.classList.add('disabled');
     }
 }
 

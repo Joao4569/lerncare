@@ -12,5 +12,5 @@
 }
 
 .nav-link:hover {
-	color: #DFE0DF;
+	color: #DFE0DF !important;
 }
