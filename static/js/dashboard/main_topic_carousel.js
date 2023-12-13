@@ -23,16 +23,22 @@ function mainTopicCarousel() {
     document.getElementById('prev-button').addEventListener('click', function() {
         if (currentStartIndex > 0) {
             currentStartIndex--;
-            updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
+        } else {
+            // If we're at the beginning, loop back to the last set of buttons
+            currentStartIndex = mainTopics.length - 3;
         }
+        updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
     });
 
     // Listen for next button clicks and update the buttons
     document.getElementById('next-button').addEventListener('click', function() {
         if (currentStartIndex < mainTopics.length - 3) {
             currentStartIndex++;
-            updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
+        } else {
+            // If we're at the end, loop back to the first set of buttons
+            currentStartIndex = 0;
         }
+        updateMainTopicButtonsContentAndId(currentStartIndex, buttons, mainTopics);
     });
 }
 
