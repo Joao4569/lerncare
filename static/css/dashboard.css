@@ -20,6 +20,22 @@
 .dropdown-header {
 	font-weight: 500;
 	color: #DFE0DF !important;
+	font-size: 1rem;
+}
+
+.dropdown-menu {
+	background-color: #643E1C !important;
+	width: 100% !important;
+}
+
+.dropdown-item {
+	font-weight: 600;
+	color: #f98f23 !important;
+}
+
+.dropdown-item:active {
+	color: #DFE0DF !important;
+	background-color: #534439 !important;
 }
 
 .tile-title {
