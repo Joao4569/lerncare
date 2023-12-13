@@ -1,16 +1,16 @@
 /* Navbar */
 
 .navbar {
-  height: 4vh !important;
+  height: 4vh;
 }
 
 .nav-link {
 	font-family: 'Roboto', sans-serif;
-	color: #534439 !important;
+	color: #534439;
 	font-weight: 700;
 	font-size: 1.2rem;
 }
 
 .nav-link:hover {
-	color: #DFE0DF !important;
+	color: #DFE0DF;
 }

@@ -14,11 +14,11 @@ body {
 /* Color */
 
 .orange-bg {
-	background-color: #f98f23 !important;
+	background-color: #f98f23;
 }
 
 .text-brown {
-	color: #643E1C !important;
+	color: #643E1C;
 }
 
 /* Header */
@@ -49,7 +49,7 @@ footer {
 }
 
 .link-hover:hover {
-	color: #DFE0DF !important;
+	color: #DFE0DF;
 }
 
 .no-deco {
@@ -57,12 +57,12 @@ footer {
 }
 
 .footer-text {
-	font-weight: 500 !important;
+	font-weight: 500;
 }
 
 .copyright {
 	font-family: 'Roboto', sans-serif;
-	color: #534439 !important;
+	color: #534439;
 	font-weight: 700;
 }
 

@@ -18,18 +18,18 @@
 }
 
 .dropdown-header {
-	font-weight: 500 !important;
-	color: white !important;
+	font-weight: 500;
+	color: #DFE0DF !important;
 }
 
 .tile-title {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
-	font-size: 2rem !important;
+	font-size: 2rem;
 }
 
 .tile-hover:hover {
-	color: #DFE0DF !important;
+	color: #DFE0DF;
 }
 
 .tile-content {
@@ -39,28 +39,40 @@
 /* Main topic carousel */
 
 .main-topic-btn-selected {
-	background-color: #643E1C !important;
+	background-color: #643E1C;
+	color: #f98f23; 
+}
+
+.main-topic-btn-selected:hover {
 	color: #f98f23 !important; 
+}
+
+.main-topic-btn:hover {
+	color: #DFE0DF;
 }
 
 .main-topic-btn {
 	font-family: 'Roboto', sans-serif;
 	font-weight: 600;
-	font-size: 1.3rem !important;
+	font-size: 1.3rem;
 }
 
 .main-topic-scroll {
-	color: #f98f23 !important;
-	font-weight: 900 !important;
-	font-size: 3rem !important;
+	color: #f98f23;
+	font-weight: 900;
+	font-size: 3rem;
 }
 
 .carousel-nav:focus {
 	box-shadow: none; /* Removes Bootstrap's default glow */
 }
 
+.carousel-nav:hover {
+	background-color: #534439;
+}
+
 .carousel-nav:active {
-	background-color: #534439 !important;
+	background-color: #DFE0DF;
 }
 
 /* Media queries */
