@@ -12,6 +12,7 @@
     <nav class="navbar navbar-expand orange-bg">
       
       <div class="col-12">
+        
         <ul class="nav justify-content-center">
           <li class="nav-item">
             <a class="nav-link" href="{% url 'home' %}">Home</a>
@@ -41,7 +42,7 @@
 						<a class="nav-link" href="#">Carebot</a>
 					</li>
         </ul
-        </div>
+
       </div>
       
     </nav>
@@ -49,9 +50,9 @@
   </div>
 </div>
   
-  {% endblock %}
+{% endblock %}
   
-  {% block content %}
+{% block content %}
   
   <!-- Aspect Tile and main topic carousel container -->
   <div class="contanier pt-2">
@@ -292,9 +293,9 @@
     
   </div>
   
-  {% endblock %}
+{% endblock %}
   
-  {% block extra_js %}
+{% block extra_js %}
 
   <!-- This script will store custom information in the session -->
   <script src="{% static 'js/dashboard/custom_session_info.js' %}"></script>
@@ -317,4 +318,4 @@
   <!-- Main topic carousel script -->
   <script src="{% static 'js/dashboard/main_topic_carousel.js' %}"></script>
 
-  {% endblock %}
+{% endblock %}
