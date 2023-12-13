@@ -12,15 +12,15 @@
       <!-- Filter for aspect content with the aspect of vignette and the user selected main topic -->
       {% if vignette.aspect.programmatic_name == aspect_selected and vignette.topic.programmatic_name == topic_selected %}
         <div class="col-12 orange-bg">
-          <h1 class="text-black">Selected Aspect = {{ aspect_selected }}</h1>
-          <h1 class="text-black">Aspect Programmatic name = {{ vignette.aspect.programmatic_name }}</h1>
-          <h1 class="text-black"> Testing Successfull Main topic = {{ vignette.topic.programmatic_name }}</h1>
-          <h2 class="text-black ">Aspect = {{ vignette.aspect }}</h2>
-          <p class="text-black">Title Content = {{ vignette.title }}</p>
-          <p class="text-black">Situation Content = {{ vignette.situation }}</p>
-          <p class="text-black">Question Content = {{ vignette.question }}</p>
+          <h1 class="text-brown">Selected Aspect = {{ aspect_selected }}</h1>
+          <h1 class="text-brown">Aspect Programmatic name = {{ vignette.aspect.programmatic_name }}</h1>
+          <h1 class="text-brown"> Testing Successfull Main topic = {{ vignette.topic.programmatic_name }}</h1>
+          <h2 class="text-brown ">Aspect = {{ vignette.aspect }}</h2>
+          <p class="text-brown">Title Content = {{ vignette.title }}</p>
+          <p class="text-brown">Situation Content = {{ vignette.situation }}</p>
+          <p class="text-brown">Question Content = {{ vignette.question }}</p>
           {% for keyword in vignette.keywords.all %}
-            <p class="text-black">Keyword Content = {{ keyword.keyword }}</p>
+            <p class="text-brown">Keyword Content = {{ keyword.keyword }}</p>
           {% endfor %}
         </div>
       {% endif %}

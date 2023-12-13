@@ -6,11 +6,11 @@
 
 .nav-link {
 	font-family: 'Roboto', sans-serif;
-	color: black !important;
+	color: #534439 !important;
 	font-weight: 700;
 	font-size: 1.2rem;
 }
 
 .nav-link:hover {
-	color: white !important;
+	color: #DFE0DF !important;
 }

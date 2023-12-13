@@ -7,18 +7,18 @@ html {
 }
 
 body {
-	background-color: white;
+	background-color: #DFE0DF;
 	font-family: 'Raleway', sans-serif
 }
 
 /* Color */
 
 .orange-bg {
-	background-color: #ff8a13f7 !important;
+	background-color: #f98f23 !important;
 }
 
-.text-black {
-	color: black !important;
+.text-brown {
+	color: #643E1C !important;
 }
 
 /* Header */
@@ -49,7 +49,7 @@ footer {
 }
 
 .link-hover:hover {
-	color: white !important;
+	color: #DFE0DF !important;
 }
 
 .no-deco {
@@ -62,7 +62,7 @@ footer {
 
 .copyright {
 	font-family: 'Roboto', sans-serif;
-	color: black !important;
+	color: #534439 !important;
 	font-weight: 700;
 }
 
