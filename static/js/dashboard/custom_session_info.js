@@ -19,3 +19,16 @@ document.querySelector('.dropdown-item').addEventListener('click', function(even
     let aspectTile = sessionStorage.getItem('userSelectedAspect');
     window.location.href = this.href + aspectTile + '/' + mainTopic;
 });
+
+
+// This will allocate the user selected aspect and mainTopic names to the url
+// when the vignette navbar button is clicked.
+document.getElementById('vignette-url').addEventListener('click', function(event) {
+    event.preventDefault();
+    let userSelectedAspect = 'vignette';
+    sessionStorage.setItem('userSelectedAspect', userSelectedAspect);
+
+    let mainTopic = sessionStorage.getItem('mainTopicName');
+    let aspectTile = sessionStorage.getItem('userSelectedAspect');
+    window.location.href = this.href + aspectTile + '/' + mainTopic;
+});
