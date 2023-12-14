@@ -1,0 +1,18 @@
+.aspect-scroll-icon {
+  font-size: 3rem;
+}
+
+.aspect-scroll-text {
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.aspect-scroll:focus {
+	box-shadow: none; /* Removes Bootstrap's default glow */
+}
+
+.aspect-scroll:hover {
+	background-color: #f98f23;
+  color: #643E1C;
+}
+
