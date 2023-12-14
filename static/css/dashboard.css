@@ -58,10 +58,6 @@
 
 /* Main topic carousel */
 
-.carousel-container {
-	height: 20vh;
-}
-
 .main-topic-btn-selected {
 	background-color: #643E1C;
 	color: #f98f23; 
