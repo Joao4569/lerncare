@@ -12,7 +12,16 @@
 }
 
 .aspect-scroll:hover {
-	background-color: #f98f23;
-  color: #643E1C;
+	background-color: #ea8232;
+  color: #005247;
+}
+
+.aspect-scroll:active {
+  background-color: #663D1F;
+  color: #ea8232;
+}
+
+.white-bg {
+  background-color: #DFE0DF !important;
 }
 

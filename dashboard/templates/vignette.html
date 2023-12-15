@@ -79,28 +79,78 @@
 
 </div>
 
-<div class="row container pt-5">
+<!-- Vignette information display conatiner -->
+<div class="container mt-5 orange-bg p-5">
+  <!-- Loop through aspect content -->
+  {% for vignette in vignette_content %}
 
-    <!-- Loop through aspect content -->
-    {% for vignette in vignette_content %}
+    <!-- Filter for aspect content with the aspect of vignette and the user selected main topic -->
+    {% if vignette.aspect.programmatic_name == aspect_selected and vignette.topic.programmatic_name == topic_selected %}
 
-      <!-- Filter for aspect content with the aspect of vignette and the user selected main topic -->
-      {% if vignette.aspect.programmatic_name == aspect_selected and vignette.topic.programmatic_name == topic_selected %}
-        <div class="col-12 orange-bg">
+      <!-- Title row -->
+      <div class="row white-bg mb-3 pt-3">
+        <div class="col-10">
+          <p class="text-brown">Title = {{ vignette.title }}</p>
+        </div>
+        <div class="col-2">
+          <p>Tag</p>
+        </div>
+      </div>
+
+      <!-- Situation row -->
+      <div class="row white-bg mb-3 pt-3">
+        <div class="col-10">
+          <p class="text-brown">Situation Content = {{ vignette.situation }}</p>
+        </div>
+        <div class="col-2">
+          <p>Tag</p>
+        </div>
+      </div>
+
+      <!-- Question row -->
+      <div class="row white-bg mb-3 pt-3">
+        <div class="col-10">
+          <p class="text-brown">Frage: {{ vignette.question }}</p>
+        </div>
+        <div class="col-2">
+          <p>Tag</p>
+        </div>
+      </div>
+
+      <!-- Keywords row -->
+      <div class="row white-bg pt-3">
+        <div class="col-10">
+          <span class="text-brown">Keywords: </span>
+          {% for keyword in vignette.keywords.all %}
+            <span class="text-brown">{{ keyword.keyword }}</span>{% if not forloop.last %},{% else %}.{% endif %}
+          {% endfor %}
+        </div>
+        <div class="col-2">
+          <p>Tag</p>
+        </div>
+      </div>
+
+    {% endif %}
+
+  {% endfor %}
+    
+
+    
+        {% comment %} <div class="col-12 orange-bg">
           <h1 class="text-brown">Selected Aspect = {{ aspect_selected }}</h1>
           <h1 class="text-brown">Aspect Programmatic name = {{ vignette.aspect.programmatic_name }}</h1>
           <h1 class="text-brown"> Testing Successfull Main topic = {{ vignette.topic.programmatic_name }}</h1>
           <h2 class="text-brown ">Aspect = {{ vignette.aspect }}</h2>
-          <p class="text-brown">Title Content = {{ vignette.title }}</p>
-          <p class="text-brown">Situation Content = {{ vignette.situation }}</p>
-          <p class="text-brown">Question Content = {{ vignette.question }}</p>
-          {% for keyword in vignette.keywords.all %}
-            <p class="text-brown">Keyword Content = {{ keyword.keyword }}</p>
-          {% endfor %}
-        </div>
-      {% endif %}
+          
+          
+          
+          
+        </div> {% endcomment %}
       
-    {% endfor %}
+      
+    
+
 </div>
+
 {% endblock content %}
 ```
