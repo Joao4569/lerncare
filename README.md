@@ -46,35 +46,68 @@ This will hold the content for everything related to the User Dashboard.
 
 ## Dependencies
 
-All dependencies are recorded in the `requirements.txt` file.
+The application targets Django 5.2 LTS. Direct production dependencies are
+pinned in `requirements.txt`.
 
 ### Runtime
 
-The runtime dependencies are stored in the `runtime.txt file`. A specific Python version is required on runtime due to the `Psycopg2` dependency.
+The supported runtime is Python 3.14, declared in `.python-version`. Heroku uses
+the latest available Python 3.14 patch release on each build.
+
+Create a local environment and install the dependencies with:
+
+```bash
+python3.14 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+export DEBUG=True
+```
 
 ## Deployment
 
 Lerncare is deployed [here!](https://lerncare-13184912aa8c.herokuapp.com/)
 
-Lerncare has been running a continuos deployment cycle from the onset of the development process, in order to keep with the Agile methodology and best practices.
+Lerncare uses continuous deployment from the `main` branch.
 
 Lerncare is deployed on Heroku while making use of the "Heroku Postgres" Add-on, the Heroku application name is "lerncare".
 
-All the media and static files for Lerncare are stored on Cloudinary. Database url's have been setup to route to Heroku Postgres when in production and SQLite3 when in development (`lerncareProject/setting.py` ).
+Static files are collected during the Heroku build and served by WhiteNoise.
+The application uses Heroku Postgres when `DATABASE_URL` is present and SQLite
+for local development.
 
-The Cloudinary apps are listed in the Installed apps list and the paths for static and media files are specified within `lerncareProject/setting.py`, in the relevant sections.
+The production environment must define `SECRET_KEY`. `ALLOWED_HOSTS` can be a
+comma-separated list and defaults to the current Heroku hostname plus local
+development hosts. Set `DEBUG=True` only during local development.
 
-A template path and allowed hosts are also specified in `lerncareProject/setting.py`.
+Heroku terminates TLS at its router. Django trusts the forwarded HTTPS header,
+redirects plain HTTP requests, uses secure session and CSRF cookies, and starts
+with a one-hour HSTS policy. `SECURE_HSTS_SECONDS` can be increased after the
+HTTPS configuration has been observed in production. HSTS subdomain and preload
+directives deliberately remain disabled for the shared Heroku hostname; enable
+them only after validating every subdomain of a custom domain.
 
-All the environment variables are stored in a `env.py` file and as configuration variables in the Heroku lerncare application in order to keep the platform secure. A Procfile for Heroku was also created.
+The `Procfile` applies pending migrations in Heroku's release phase, then starts
+the Django WSGI application with Gunicorn.
 
 ## Testing
 
-This application is built using a test driven development mindset, integrated automated Python Unit tests are made use of throughout the build process.
+Run the checks and tests with:
+
+```bash
+python manage.py check
+python manage.py makemigrations --check --dry-run
+python manage.py test
+python manage.py collectstatic --noinput
+gunicorn --check-config lerncareProject.wsgi
+```
 
 ### Deployment testing
 
-Once all the deployment settings were in place and the project was deployed on Heroku, I proceeded to manually test the deployment by creating a template for testing output on the deployed site.
+Before a production release, take a Heroku Postgres backup and verify the home
+page, dashboard, admin, database access, and static assets in staging. After
+deployment, run `python manage.py check --deploy` with the production
+configuration and smoke-test the same routes.
 
 
 ## Credits
